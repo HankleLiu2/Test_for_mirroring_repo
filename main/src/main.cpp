@@ -29,7 +29,6 @@ int main() {
     cout << setprecision(4) << "center of mass (x,y,z) = " << center_of_mass << endl;
     cout << setprecision(4) << "center of mass (x,y,z) = " << center_of_second_mass << endl;
 
-    //a useless print statement
-    cout << "make a change" << endl;
+    //a useless print statement    
     return 0;
 }

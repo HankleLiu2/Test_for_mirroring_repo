@@ -91,7 +91,7 @@ double average(double *my_list_to_average, int num_elements)
     double total = 0;
     
     //loop over vector
-    for(int i = 0; i <= num_elements; i++)
+    for(int i = 0; i < num_elements; i++)
     {
         //increment total with current element
         total += my_list_to_average[i];
