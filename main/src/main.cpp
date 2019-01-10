@@ -17,16 +17,18 @@ using namespace std;
 int main() {
     
     //define a density polynomial
-    Polynomial *my_density_function = new Polynomial(7,3,0.5,2,1,5);
+    Polynomial *my_density_function = new Polynomial(5,3,0.5,2,1,5);
+    Polynomial *my_g_function = new Polynomial(1,1,2,2,3,3);
 
     //find the center of mass of a cuboid of size (5,6,10) with our density function
     Coordinates center_of_mass = compute_center_of_mass(*my_density_function,5,6,10);
+    
+    Coordinates center_of_second_mass = compute_center_of_mass(*my_g_function,5,5,5);
 
     //print out center of mass
     cout << setprecision(4) << "center of mass (x,y,z) = " << center_of_mass << endl;
+    cout << setprecision(4) << "center of mass (x,y,z) = " << center_of_second_mass << endl;
 
-    //a useless print statement
-    cout << "Program Finished!" << endl;
-    
+    //a useless print statement    
     return 0;
 }
