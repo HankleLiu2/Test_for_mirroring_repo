@@ -55,7 +55,7 @@ double integrate_3d(Polynomial myfunc, double xstart, double xend, int xnum_poin
                 list_of_points[7] = myfunc.value(xcurr+dx,ycurr+dy,zcurr+dz);
 
                 //compute the average of the function in our current delta-volume
-                double favg = average(list_of_points,9);
+                double favg = average(list_of_points,8);
                 
                 //push that average into a vector to be summed up later
                 average_function_value.push_back(favg);
