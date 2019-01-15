@@ -10,7 +10,7 @@ double integrate_3d(Polynomial myfunc, double xstart, double xend, int xnum_poin
 {
     //result of integration
     double result = 0;
-    
+    double *list_of_points = new double[8];
     //based on the number of points in each dimensions we define the delta-x/delta-y/delta-z
     double dx = (xend - xstart)/(double)xnum_points;
     double dy = (yend - ystart)/(double)ynum_points;
@@ -42,7 +42,7 @@ double integrate_3d(Polynomial myfunc, double xstart, double xend, int xnum_poin
             {
                 //array to store all the points that we need to average
                 //we are averaging over the 8 vertices of this (dx,dy,dz) cube
-                double *list_of_points = new double[8];
+                
                 
                 //compute the function points that require averaging
                 list_of_points[0] = myfunc.value(xcurr,ycurr,zcurr);
@@ -80,7 +80,7 @@ double integrate_3d(Polynomial myfunc, double xstart, double xend, int xnum_poin
         // and the average function value in that space
         result += (average_function_value[i] * dx * dy * dz);
     }
-    
+    delete[] list_of_points;
     return result;
 }
 
