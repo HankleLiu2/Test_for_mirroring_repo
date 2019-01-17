@@ -32,5 +32,6 @@ int main() {
     delete my_density_function;
     delete my_g_function;
     //a useless print statement    
+    //hiiiiiiiiiiii you
     return 0;
 }
